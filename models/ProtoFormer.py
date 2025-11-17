@@ -1,5 +1,3 @@
-import os
-os.environ['TORCH_CUDA_ARCH_LIST'] = "9.0"
 import torch.nn.functional
 import numpy as np
 from models.utils import *
