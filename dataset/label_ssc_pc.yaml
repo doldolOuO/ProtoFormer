@@ -1,0 +1,112 @@
+0:
+  color:
+  - 255
+  - 128
+  - 128
+  name: bathtub
+  validation: true
+1:
+  color:
+  - 255
+  - 128
+  - 0
+  name: bed
+  validation: true
+2:
+  color:
+  - 128
+  - 255
+  - 128
+  name: bookshelf
+  validation: true
+3:
+  color:
+  - 255
+  - 0
+  - 0
+  name: cabinet
+  validation: true
+4:
+  color:
+  - 255
+  - 255
+  - 255
+  name: celling
+  validation: true
+5:
+  color:
+  - 0
+  - 128
+  - 255
+  name: chair
+  validation: true
+6:
+  color:
+  - 128
+  - 0
+  - 0
+  name: desk
+  validation: true
+7:
+  color:
+  - 255
+  - 255
+  - 0
+  name: door
+  validation: true
+8:
+  color:
+  - 0
+  - 128
+  - 0
+  name: floor
+  validation: true
+9:
+  color:
+  - 0
+  - 0
+  - 0
+  name: other
+  validation: true
+10:
+  color:
+  - 128
+  - 0
+  - 128
+  name: sink
+  validation: true
+11:
+  color:
+  - 255
+  - 0
+  - 255
+  name: sofa
+  validation: true
+12:
+  color:
+  - 128
+  - 128
+  - 255
+  name: table
+  validation: true
+13:
+  color:
+  - 128
+  - 128
+  - 0
+  name: toilet
+  validation: true
+14:
+  color:
+  - 0
+  - 64
+  - 128
+  name: tv
+  validation: true
+15:
+  color:
+  - 128
+  - 255
+  - 255
+  name: wall
+  validation: true
