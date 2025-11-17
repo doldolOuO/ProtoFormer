@@ -19,20 +19,6 @@ def eval_points_segmentation(
     num_classes: int,
     ignore_index: int,
 ):
-    """
-    计算当前 batch 的混淆矩阵 (confusion matrix) histogram。
-
-    Args:
-        pred_points: (B, N_pred, 3) Tensor
-        gt_points: (B, N_gt, 3) Tensor
-        pred_seg: (B, N_pred) Tensor
-        gt_seg: (B, N_gt) Tensor
-        num_classes: 类别数
-        ignore_index: 忽略的标签索引
-
-    Returns:
-        batch_hist: (num_classes, num_classes) numpy ndarray
-    """
     global _dist_with_idx
     if _dist_with_idx is None:
         _dist_with_idx = ChamferDistanceFunctionWithIdxNoGrad()
