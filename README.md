@@ -1,9 +1,8 @@
 # Point Cloud Semantic Scene Completion with Prototype-Guided Transformer (AAAI 2026)
 
 ## 🌱 Datasets
-### SSC-PC
-
-### NYUCAD-PC
+### SSC-PC & NYUCAD-PC
+The SSC-PC and NYUCAD-PC dataset used in this work is sourced from the [CasFusionNet](https://github.com/JinfengX/CasFusionNet).
 
 ## 🚀 Getting Started
 ### Requirements
@@ -28,6 +27,9 @@ python setup.py install
 ### Evaluation
 
 ### Pre-trained weights
+- [SSC-PC](https://drive.google.com/file/d/1StgClDcE9VaymA9B6zkdNabtHj_NDzQu/view?usp=drive_link)
+
+- [NYUCAD-PC](https://drive.google.com/file/d/1wJuXDbD81THfG2Cig9Ljd16SS_HXqlb8/view?usp=drive_link)
 
 ## ❤️ Acknowledgements
 Some of the code of this repo is borrowed from:
