@@ -1,0 +1,13 @@
+ssc-pc
+The CD L1 is: 8.917
+The CD L2 is: 3.980
+The F1-score is: 0.559
+mAcc is: 95.48
+mIoU is: 90.71
+
+nyucad-pc
+The CD L1 is: 10.673
+The CD L2 is: 15.886
+The F1-score is: 0.762
+mAcc is: 60.68
+mIoU is: 49.19
