@@ -1,5 +1,4 @@
-import os, warnings, time, random
-os.environ['TORCH_CUDA_ARCH_LIST'] = "9.0"
+import warnings, time, random
 import torch
 import numpy as np
 from tqdm import tqdm
@@ -113,8 +112,6 @@ def main():
                 partial = data[0].to(device)
                 gt = data[1].to(device)
                 label = data[2].to(device)
-                # if DATASET == 'NYUCAD-PC':
-                #     label = label - 1
                 out = model(partial)
                 loss_out = loss_train(out, torch.cat((gt, label.unsqueeze(-1)), dim=-1))
                 loss = loss_out['sum_loss']
@@ -136,7 +133,6 @@ def main():
                     for batch_idx, data in enumerate(t):
                         partial = data[0].to(device)
                         gt = data[1].to(device)
-                        # label = data[2].to(device)
                         out = model(partial)
                         loss = loss_cd(out[-1][:, :, :3].contiguous(), gt)
                         Loss += loss * 1e3
