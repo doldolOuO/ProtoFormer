@@ -59,8 +59,6 @@ with torch.no_grad():
         partial = data[0].to(device)
         gt = data[1].to(device)
         label = data[2].to(device)
-        # if DATASET == 'NYUCAD-PC':
-        #     label = label - 1
         out = model(partial)
         completion = out[-1][:, :, :3].contiguous()
         logits = out[-1][:, :, 3:].contiguous()
