@@ -28,7 +28,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py
 ```
 ### Evaluation
 ```
-CUDA_VISIBLE_DEVICES=0 python eval.py
+CUDA_VISIBLE_DEVICES=0 python test.py
 ```
 ### Pre-trained weights
 - [SSC-PC](https://drive.google.com/file/d/1StgClDcE9VaymA9B6zkdNabtHj_NDzQu/view?usp=drive_link)
