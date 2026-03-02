@@ -18,7 +18,7 @@ if DATASET == 'SSC-PC':
                    'chair', 'desk', 'door', 'floor', 'other',
                    'sink', 'sofa', 'table', 'toilet', 'tv', 'wall']
     ignore_index = -1
-    model = ProtoFormer(16,1024,2048,1.2,[1,2])
+    model = ProtoFormer(16, 1024, 2048, 1.2, [1,2])
 else:
     root_dir = '/data/FangChengHao/data/NYUCAD-PC'
     test_list_file = './dataset/test_nyucad_pc_list.txt'
