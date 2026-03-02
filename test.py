@@ -3,7 +3,7 @@ from tqdm import tqdm
 import numpy as np
 from dataloader import get_dataloader
 from models.ProtoFormer import ProtoFormer
-from cuda.ChamferDistance import L1_ChamferDistance, L2_ChamferDistance, F1Score
+from cuda.ChamferDistance import L1_ChamferDistance, F1Score
 from seg_eval import eval_points_segmentation
 
 
@@ -45,7 +45,6 @@ num_classes = len(class_names)
 total_hist = np.zeros((num_classes, num_classes), dtype=np.int64)
 
 loss_cd1 = L1_ChamferDistance()
-loss_cd2 = L2_ChamferDistance()
 loss_f1 = F1Score()
 
 with torch.no_grad():
@@ -72,11 +71,9 @@ with torch.no_grad():
 
         # Simultaneously compute point cloud completion loss and F1-score
         loss1 = loss_cd1(completion, gt)
-        loss2 = loss_cd2(completion, gt)
         f1, _, _ = loss_f1(completion, gt)
         f1 = f1.mean()
         Loss1 += loss1.item()
-        Loss2 += loss2.item()
         f1_final += f1.item()
 
 # Calculate overall metrics
@@ -100,7 +97,6 @@ def get_acc_cls(hist: np.ndarray) -> float:
     return float(np.nanmean(acc_cls))
 
 Loss1 = Loss1 / i
-Loss2 = Loss2 / i
 f1_final = f1_final / i
 
 iou = per_class_iou(total_hist)
@@ -110,8 +106,7 @@ miou = np.nanmean(iou)
 acc = get_acc(total_hist)
 acc_cls = get_acc_cls(total_hist)
 
-print(f"The CD L1 is: {Loss1 * 1e3:.3f}")
-print(f"The CD L2 is: {Loss2 * 1e4:.3f}")
+print(f"The CD is: {Loss1 * 1e3:.3f}")
 print(f"The F1-score is: {f1_final:.3f}")
 print(f"mAcc is: {acc_cls * 1e2:.2f}")
 print(f"mIoU is: {miou * 1e2:.2f}")
