@@ -1,4 +1,11 @@
-# Point Cloud Semantic Scene Completion with Prototype-Guided Transformer (AAAI 2026)
+<div align="center">
+  
+# Point Cloud Semantic Scene Completion with <br> Prototype-Guided Transformer
+
+<a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
+[![Conference](http://img.shields.io/badge/AAAI-2026-4b44ce.svg)](https://aaai-26.aaai.org/)
+
+</div>
 
 <p align="center">
   <img src="./ProtoFormer.png" width="500">
