@@ -17,6 +17,28 @@ Semantic scene completion simultaneously reconstructs the shapes of missing regi
 ## 🌱 Datasets
 ### SSC-PC & NYUCAD-PC
 The SSC-PC and NYUCAD-PC dataset used in this work is sourced from the [CasFusionNet](https://github.com/JinfengX/CasFusionNet).
+We adopt the same training and testing setup as in prior work, with several modifications. The structure of our data directory is as follows:
+
+```bash
+data
+├── SSC-PC/
+│   ├── 01_Bathroom_00_1_gt.npy
+│   ├── 01_Bathroom_00_1_input.npy
+│   ├── 01_Bathroom_00_2_gt.npy
+│   ├── 01_Bathroom_00_2_input.npy
+│   ├── ...
+│   ├── 01_Bedroom_00_1_gt.npy
+│   ├── 01_Bedroom_00_1_input.npy
+│   ├── ...
+├── NYUCAD-PC/
+│   ├── 1_kitchen_0004_1_gt.npy
+│   ├── 1_kitchen_0004_1_input.npy
+│   ├── 2_kitchen_0004_2_gt.npy
+│   ├── 2_kitchen_0004_2_input.npy
+│   ├── 3_office_0003_1_gt.npy
+│   ├── 3_office_0003_1_input.npy
+│   ├── ...
+```
 
 ## 🚀 Getting Started
 ### Requirements
